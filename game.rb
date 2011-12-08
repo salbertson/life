@@ -32,4 +32,27 @@ class Game
 
     count
   end
+
+  def play
+    temporary_board = Marshal.load(Marshal.dump(@board))
+
+    @board.length.times do |row|
+      @board.first.length.times do |column|
+        neighbors = neighbor_count(column, row)
+        #puts "(#{column}, #{row}): #{neighbors}"
+
+        # < 2 die
+        # 2, 3 live
+        # > 3 die
+        # 3 rebord
+        if neighbors < 2 || neighbors > 3
+          temporary_board[row][column] = nil
+        elsif neighbors == 3
+          temporary_board[row][column] = 1
+        end
+      end
+    end
+
+    @board = temporary_board
+  end
 end
