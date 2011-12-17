@@ -1,15 +1,14 @@
 class Game
+  # Improvements:
+  # - Create classes for board (colony?), and cell
+  # - Allow cells to "loop" the board by calculating neighbor count with modulus
+  # - Play endlessly, dump out board each iteration, and clear previous output
+
   attr_accessor :board
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
       Array.new(columns)
-    end
-  end
-
-  def print
-    @board.length.times do |row|
-      puts @board[row].inspect
     end
   end
 
@@ -21,11 +20,8 @@ class Game
         neighbor_y = y + y_offset
         neighbor_x = x + x_offset
 
-        if neighbor_x >= 0 && neighbor_y >= 0 && @board[neighbor_y] && @board[neighbor_y][neighbor_x]
-          #puts "(#{neighbor_x}, #{neighbor_y})"
-          if y_offset != 0 || x_offset != 0
-            count += 1 if @board[neighbor_y][neighbor_x]
-          end
+        if y_offset != 0 || x_offset != 0
+          count += 1 if alive?(neighbor_x, neighbor_y)
         end
       end
     end
@@ -39,12 +35,7 @@ class Game
     @board.length.times do |row|
       @board.first.length.times do |column|
         neighbors = neighbor_count(column, row)
-        #puts "(#{column}, #{row}): #{neighbors}"
 
-        # < 2 die
-        # 2, 3 live
-        # > 3 die
-        # 3 rebord
         if neighbors < 2 || neighbors > 3
           temporary_board[row][column] = nil
         elsif neighbors == 3
@@ -54,5 +45,24 @@ class Game
     end
 
     @board = temporary_board
+  end
+
+  def print
+    @board.length.times do |row|
+      puts @board[row].map {|cell| cell ? "x" : " "}.join
+    end
+  end
+
+
+  private
+
+  def alive?(x, y)
+    cell = nil
+
+    if x >= 0 && y >= 0 && @board[y] && @board[y][x]
+      cell = @board[y][x]
+    end
+
+    return cell ? true : false
   end
 end
