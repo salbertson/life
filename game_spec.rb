@@ -8,7 +8,7 @@ describe Game do
 
     describe "without cells" do
       it "should return empty board" do
-        @game.board.should == [[nil, nil, nil],[nil, nil, nil]]
+        @game.board.should == [[0, 0, 0],[0, 0, 0]]
       end
     end
 
@@ -19,7 +19,7 @@ describe Game do
       end
 
       it "should return board with expected cells" do
-        @game.board.should == [[1, nil, nil],[nil, nil, 1]]
+        @game.board.should == [[1, 0, 0],[0, 0, 1]]
       end
     end
   end
@@ -63,7 +63,7 @@ describe Game do
         end
 
         it "should swap blinker from vertical to horizontal" do
-          @game.board.should == [[nil, nil, nil],[1, 1, 1], [nil, nil, nil]]
+          @game.board.should == [[0, 0, 0],[1, 1, 1], [0, 0, 0]]
         end
       end
 
@@ -74,7 +74,7 @@ describe Game do
         end
 
         it "should return to starting position" do
-          @game.board.should == [[nil, 1, nil],[nil, 1, nil], [nil, 1, nil]]
+          @game.board.should == [[0, 1, 0],[0, 1, 0], [0, 1, 0]]
         end
       end
     end

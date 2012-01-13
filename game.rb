@@ -8,7 +8,7 @@ class Game
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
-      Array.new(columns)
+      Array.new(columns, 0)
     end
   end
 
@@ -37,7 +37,7 @@ class Game
         neighbors = neighbor_count(column, row)
 
         if neighbors < 2 || neighbors > 3
-          temporary_board[row][column] = nil
+          temporary_board[row][column] = 0
         elsif neighbors == 3
           temporary_board[row][column] = 1
         end
@@ -49,7 +49,7 @@ class Game
 
   def print
     @board.length.times do |row|
-      puts @board[row].map {|cell| cell ? "x" : " "}.join
+      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
     end
   end
 
@@ -63,6 +63,6 @@ class Game
       cell = @board[y][x]
     end
 
-    return cell ? true : false
+    return cell == 1 ? true : false
   end
 end
