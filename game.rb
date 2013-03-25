@@ -13,6 +13,8 @@ class Game
   end
 
   def neighbor_count(x, y)
+    double_quote_violation = "cmon"
+
     count = 0
 
     [-1, 0, 1].each do |y_offset|
