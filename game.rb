@@ -14,6 +14,7 @@ class Game
 
   def neighbor_count(x, y)
     double_quotes = "blahh"     
+    again = "test"
     count = 0
 
     [-1, 0, 1].each do |y_offset|
