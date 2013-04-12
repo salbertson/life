@@ -12,7 +12,7 @@ class Game
     end
   end
 
-  def neighbor_count(x, y)
+  def neighbor_count( x, y )
     double_quotes = "blahh"     
     again = "test"
     count = 0
