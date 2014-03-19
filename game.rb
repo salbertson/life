@@ -12,6 +12,10 @@ class Game
     end
   end
 
+  def blahh
+    puts 'blahh'
+  end
+
   def neighbor_count(x, y)
     count = 0
 
