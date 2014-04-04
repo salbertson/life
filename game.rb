@@ -8,9 +8,7 @@ class Game
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
-
-      Array.new columns, 0
-
+      Array.new(columns, 0)
     end
   end
 
@@ -32,7 +30,7 @@ class Game
   end
 
   def play
-    temporary_board = Marshal.load(Marshal.dump(@board))
+    temporary_board = Marshal.load(Marshal.dump(@board))      
 
     @board.length.times do |row|
       @board.first.length.times do |column|
