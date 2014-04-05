@@ -8,7 +8,7 @@ class Game
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
-      Array.new(columns, 0)      
+      Array.new(columns, 0)
     end
   end
 
@@ -47,7 +47,7 @@ class Game
     @board = temporary_board
   end
 
-  def print()
+  def print
     @board.length.times do |row|
       puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
     end
