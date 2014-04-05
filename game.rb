@@ -8,11 +8,11 @@ class Game
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
-      Array.new(columns, 0)        
+      Array.new(columns, 0)
     end
   end
 
-  def neighbor_count x, y
+  def neighbor_count(x, y)
     count = 0
 
     [-1, 0, 1].each do |y_offset|
