@@ -6,13 +6,22 @@ class Game
 
   attr_accessor :board
 
-  def initialize(rows, columns)
-    @board = Array.new(rows) do
+  # we prefer trailing
+  # hound is checking for leading
+
+  def initialize rows, columns
+    @board = Array.new(rows) do      
       Array.new(columns, 0)
     end
   end
 
   def neighbor_count(x, y)
+    blahh = [[[0]]]
+    puts blahh
+      .first
+      .first
+      .first
+
     count = 0
 
     [-1, 0, 1].each do |y_offset|
@@ -30,7 +39,7 @@ class Game
   end
 
   def play
-    temporary_board = Marshal.load(Marshal.dump(@board))
+    temporary_board = Marshal.load(Marshal.dump(@board))         
 
     @board.length.times do |row|
       @board.first.length.times do |column|

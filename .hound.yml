@@ -1,0 +1,4 @@
+DotPosition:
+  Style: 'trailing'
+  Description: 'Place the . at the end of the previous line.'
+  Enabled: true
