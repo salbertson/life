@@ -13,9 +13,9 @@ class Game
   end
 
   def neighbor_count(x, y)
-    one.
-      two.
-      three.
+    one
+      .two
+      .three
 
     count = 0
 
