@@ -70,3 +70,5 @@ class Game
     return cell == 1 ? true : false
   end
 end
+
+
