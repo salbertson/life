@@ -12,10 +12,10 @@ class Game
     end
   end
 
-  def neighbor_count(x, y)
-    one
-      .two
-      .three
+  def neighbor_count x, y
+    one.
+      two.
+      three
 
     count = 0
 
@@ -53,7 +53,7 @@ class Game
 
   def print
     @board.length.times do |row|
-      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
+      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join    
     end
   end
 
