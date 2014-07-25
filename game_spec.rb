@@ -6,7 +6,7 @@ describe Game do
 
     context "without cells" do
       it "should return empty board" do
-        game.board.should == [[0, 0, 0],[0, 0, 0]]
+        game.board.should == [ [0, 0, 0],[0, 0, 0] ]
       end
     end
 
