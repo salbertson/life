@@ -2,7 +2,7 @@ require "game"
 
 describe Game do
   describe "#board" do
-    let(:game) { Game.new(2, 3) }
+    let(:game) { Game.new( 2, 3 ) }
 
     context "without cells" do
       it "should return empty board" do
