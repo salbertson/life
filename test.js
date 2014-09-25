@@ -1,5 +1,5 @@
-function wow() {
+function blahh() {
   return 'test';
 }  
 
-wow();
+blahh();
