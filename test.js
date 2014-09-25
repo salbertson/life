@@ -1,6 +1,5 @@
 function wow() {
-  var test = 'test';
-  console.log(test);
+  return 'test';
+}  
 
-  var another_test = "test";
-}   
+wow();
