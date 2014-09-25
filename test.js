@@ -1,3 +1,3 @@
 function wow() {
-  var unused;
+  var unused
 }
