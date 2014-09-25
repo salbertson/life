@@ -1,9 +1,4 @@
 class Game
-  # Improvements:
-  # - Create classes for board (colony?), and cell
-  # - Allow cells to "loop" the board by calculating neighbor count with modulus
-  # - Play endlessly, dump out board each iteration, and clear previous output
-
   attr_accessor :board
 
   def initialize(rows, columns)
@@ -13,7 +8,7 @@ class Game
   end
 
   def neighbor_count(x, y)
-    count = 0
+    count = 0        
 
     [-1, 0, 1].each do |y_offset|
       [-1, 0, 1].each do |x_offset|
