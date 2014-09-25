@@ -2,4 +2,4 @@ function blahh() {
   return 'test';
 }  
 
-blahh();
+blahh()
