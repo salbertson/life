@@ -53,7 +53,6 @@ class Game
     end
   end
 
-
   private
 
   def alive?(x, y)
