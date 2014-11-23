@@ -29,7 +29,7 @@ class Game
     count
   end
 
-  def play
+  def play        
     temporary_board = Marshal.load(Marshal.dump(@board))
 
     @board.length.times do |row|
