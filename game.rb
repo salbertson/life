@@ -6,10 +6,14 @@ class Game
 
   attr_accessor :board
 
-  def initialize(rows, columns)
+  def initialize rows, columns
     @board = Array.new(rows) do
       Array.new(columns, 0)
     end
+  end
+
+  def blahh
+    puts 'blahh'
   end
 
   def neighbor_count(x, y)
