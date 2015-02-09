@@ -6,7 +6,7 @@ class Game
 
   attr_accessor :board
 
-  def initialize(rows, columns)
+  def initialize( rows, columns )
     @board = Array.new(rows) do
       Array.new(columns, 0)
     end
@@ -29,7 +29,7 @@ class Game
     count
   end
 
-  def play
+  def play()
     temporary_board = Marshal.load(Marshal.dump(@board))
 
     @board.length.times do |row|
@@ -49,7 +49,7 @@ class Game
 
   def print
     @board.length.times do |row|
-      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
+      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join     
     end
   end
 
