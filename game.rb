@@ -12,7 +12,11 @@ class Game
     end
   end
 
-  def neighbor_count(x, y)
+  def neighbor_count x, y
+    one.
+      two.
+      three
+
     count = 0
 
     [-1, 0, 1].each do |y_offset|
@@ -30,7 +34,7 @@ class Game
   end
 
   def play
-    temporary_board = Marshal.load(Marshal.dump(@board))
+    temporary_board = Marshal.load(Marshal.dump(@board))         
 
     @board.length.times do |row|
       @board.first.length.times do |column|
@@ -49,7 +53,7 @@ class Game
 
   def print
     @board.length.times do |row|
-      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
+      puts @board[row].map {|cell| cell == 1 ? "." : " "}.join    
     end
   end
 
