@@ -13,7 +13,7 @@ class Game
   end
 
   def neighbor_count(x, y)
-    count = 0
+    count = 0                      
 
     [-1, 0, 1].each do |y_offset|
       [-1, 0, 1].each do |x_offset|

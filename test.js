@@ -1,5 +1,1 @@
-function blahh() {
-  return 'test';
-}
-
-blahh();
+var blahh = "test"
