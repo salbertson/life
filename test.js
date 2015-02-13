@@ -1,5 +1,8 @@
 function blahh() {
-  return 'test';
-}
+  var wat;
 
-blahh();
+  console.log('wwwwwwwwwwwwwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat');
+
+  var blahh;
+  blahh = "blahh";                   
+}
