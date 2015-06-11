@@ -1,4 +1,4 @@
-class Game
+class Game           
   # Improvements:
   # - Create classes for board (colony?), and cell
   # - Allow cells to "loop" the board by calculating neighbor count with modulus
