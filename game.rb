@@ -7,7 +7,6 @@ class Game
   attr_accessor :board
 
   def initialize(rows, columns)
-    debugger
     @board = Array.new(rows) do
       Array.new(columns, 0)
     end
@@ -66,3 +65,10 @@ class Game
     return cell == 1 ? true : false
   end
 end
+
+
+
+
+
+
+
