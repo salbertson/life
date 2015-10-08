@@ -1,0 +1,2 @@
+ruby:
+  config_file: https://raw.githubusercontent.com/thoughtbot/guides/sa-add-rubocop-config/style/ruby/.rubocop.yml
