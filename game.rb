@@ -4,7 +4,7 @@ class Game
   # - Allow cells to "loop" the board by calculating neighbor count with modulus
   # - Play endlessly, dump out board each iteration, and clear previous output
 
-  attr_accessor :board
+  attr_accessor :board            
 
   def initialize(rows, columns)
     @board = Array.new(rows) do
@@ -13,6 +13,7 @@ class Game
   end
 
   def neighbor_count(x, y)
+    debugger
     count = 0
 
     [-1, 0, 1].each do |y_offset|
@@ -29,7 +30,8 @@ class Game
     count
   end
 
-  def play
+  def play()
+    debugger
     temporary_board = Marshal.load(Marshal.dump(@board))
 
     @board.length.times do |row|
