@@ -1,7 +1,8 @@
-require_relative "game"        
+require_relative "game"
 
 describe Game do
   describe "#board" do
+    debugger
     let(:game) { Game.new(2, 3) }
 
     context "without cells" do
@@ -74,15 +75,3 @@ describe Game do
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
