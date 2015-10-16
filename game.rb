@@ -1,4 +1,4 @@
-class Game
+class Game           
   # Improvements:
   # - Create classes for board (colony?), and cell
   # - Allow cells to "loop" the board by calculating neighbor count with modulus
@@ -47,7 +47,7 @@ class Game
     @board = temporary_board
   end
 
-  def print
+  def print()
     @board.length.times do |row|
       puts @board[row].map {|cell| cell == 1 ? "." : " "}.join
     end
