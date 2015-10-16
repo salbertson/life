@@ -1,4 +1,4 @@
-require_relative "game"
+require_relative "game"        
 
 describe Game do
   describe "#board" do
@@ -74,3 +74,15 @@ describe Game do
     end
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
